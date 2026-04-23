@@ -590,19 +590,13 @@ em { font-style: italic; color: var(--madera); }
   pointer-events: all;
 }
 
-.foto-viewer-img-wrap {
-  border-radius: 14px;
-  overflow: hidden;
-  display: flex;
-  line-height: 0;
-}
-
 .foto-viewer-img {
   max-width: 90vw;
   max-height: 88vh;
   object-fit: contain;
   display: block;
-  transition: opacity 0.25s ease;
+  clip-path: inset(0 round 14px);
+  transition: opacity 0.25s ease, clip-path 0s;
 }
 
 .foto-viewer-close {
