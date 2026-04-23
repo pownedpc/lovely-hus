@@ -193,7 +193,7 @@ const translations = {
 
     p5_badge: 'Seleccionada',
     p5_title: 'Calendari botànic',
-    p5_desc:  'Il·lustracions de plantes, paper de qualitat i marc de fusta. Funcional i bonic. Del tipus que no voldràs treure quan canviï el mes.',
+    p5_desc:  'Marc de fusta amb flor natural. Una peça que decora per si sola, sense necessitat de res més al seu voltant.',
 
     p6_badge: 'Seleccionada',
     p6_title: 'Espigues de pampa',
@@ -276,7 +276,7 @@ const translations = {
 
     p5_badge: 'Seleccionada',
     p5_title: 'Calendario botánico',
-    p5_desc:  'Ilustraciones de plantas, papel de calidad y marco de madera. Funcional y bonito. Del tipo que no querrás quitar cuando cambie el mes.',
+    p5_desc:  'Marco de madera con flor natural. Una pieza que decora por sí sola, sin necesidad de nada más a su alrededor.',
 
     p6_badge: 'Seleccionada',
     p6_title: 'Espigas de pampa',
