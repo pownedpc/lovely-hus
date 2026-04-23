@@ -202,7 +202,7 @@ const translations = {
     p4_desc:  'Portallàmines de fusta i corda de lli.<br>Cada làmina, seleccionada amb cura.<br><br>Per penjar soles o en composició.<br>Canvien l\'ambient d\'una paret en pocs minuts.',
 
     p5_badge: 'Seleccionada',
-    p5_title: 'Calendari botànic',
+    p5_title: 'Marc amb flor natural',
     p5_desc:  'Marc de fusta amb flor natural. Una peça que decora per si sola, sense necessitat de res més al seu voltant.',
 
     p6_badge: 'Seleccionada',
@@ -285,7 +285,7 @@ const translations = {
     p4_desc:  'Portalláminas de madera y cuerda de lino.<br>Cada lámina, seleccionada con cuidado.<br><br>Para colgar solas o en composición.<br>Cambian el ambiente de una pared en pocos minutos.',
 
     p5_badge: 'Seleccionada',
-    p5_title: 'Calendario botánico',
+    p5_title: 'Marco con flor natural',
     p5_desc:  'Marco de madera con flor natural. Una pieza que decora por sí sola, sin necesidad de nada más a su alrededor.',
 
     p6_badge: 'Seleccionada',
