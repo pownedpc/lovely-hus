@@ -24,6 +24,7 @@
       <ul class="nav-links" role="list">
         <li><a href="#historia" data-i18n="nav_historia">La història</a></li>
         <li><a href="#peces" data-i18n="nav_peces">Les peces</a></li>
+        <li><a href="#" id="open-galeria" data-i18n="nav_galeria">La galeria</a></li>
         <li><a href="#proces" data-i18n="nav_proces">El procés</a></li>
         <li><a href="#contacte" data-i18n="nav_contacte">Contacte</a></li>
       </ul>
@@ -241,30 +242,6 @@
       </div>
     </section>
 
-    <!-- GALERIA -->
-    <section class="section-galeria">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow" data-i18n="gal_eyebrow">La llar</p>
-          <h2 data-i18n="gal_h2">Espais que<br><em>se senten seus.</em></h2>
-        </div>
-      </div>
-      <div class="galeria-grid">
-        <div class="galeria-item galeria-item-1 reveal">
-          <img src="assets/photo_2026-04-21_23-22-22 (2).jpg" alt="Ram de flors en gerro de ceràmica sobre taula de fusta" class="galeria-img">
-        </div>
-        <div class="galeria-item galeria-item-2 reveal">
-          <img src="assets/photo_2026-04-21_23-22-22 (4).jpg" alt="Interior de llar amb llànties de vímet i espill" class="galeria-img">
-        </div>
-        <div class="galeria-item galeria-item-3 reveal">
-          <img src="assets/photo_2026-04-21_23-22-22 (5).jpg" alt="Olga col·locant flors sobre una taula de fusta" class="galeria-img">
-        </div>
-        <div class="galeria-item galeria-item-4 reveal">
-          <img src="assets/photo_2026-04-21_23-22-23.jpg" alt="Prestatgeria de fusta amb llibres i cistelles" class="galeria-img">
-        </div>
-      </div>
-    </section>
-
   </main>
 
   <!-- FOOTER / CONTACTE -->
@@ -288,6 +265,23 @@
       <p class="footer-copy" data-i18n="foot_copy">© 2025 Lovely Hüs by Olga · Fet amb calma i intenció</p>
     </div>
   </footer>
+
+  <!-- OVERLAY GALERIA -->
+  <div class="galeria-overlay" id="galeria-overlay" role="dialog" aria-modal="true" aria-label="Galeria">
+    <button class="galeria-overlay-close" id="galeria-close" aria-label="Tancar">✕</button>
+    <div class="galeria-overlay-inner">
+      <div class="galeria-overlay-header">
+        <p class="eyebrow" data-i18n="gal_eyebrow">La llar</p>
+        <h2 data-i18n="gal_h2">Espais que<br><em>se senten seus.</em></h2>
+      </div>
+      <div class="galeria-overlay-grid">
+        <img src="assets/photo_2026-04-21_23-22-22 (2).jpg" alt="Ram de flors en gerro de ceràmica sobre taula de fusta" class="galeria-overlay-img">
+        <img src="assets/photo_2026-04-21_23-22-22 (4).jpg" alt="Interior de llar amb llànties de vímet i espill" class="galeria-overlay-img">
+        <img src="assets/photo_2026-04-21_23-22-22 (5).jpg" alt="Olga col·locant flors sobre una taula de fusta" class="galeria-overlay-img">
+        <img src="assets/photo_2026-04-21_23-22-23.jpg" alt="Prestatgeria de fusta amb llibres i cistelles" class="galeria-overlay-img">
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

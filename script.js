@@ -63,6 +63,34 @@ if (heroContent) {
   setTimeout(() => heroContent.classList.add('visible'), 200);
 }
 
+// --- OVERLAY GALERIA ---
+const galeriaOverlay = document.getElementById('galeria-overlay');
+const galeriaClose   = document.getElementById('galeria-close');
+const galeriaOpenBtn = document.getElementById('open-galeria');
+
+function openGaleria(e) {
+  e.preventDefault();
+  galeriaOverlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  galeriaClose.focus();
+}
+
+function closeGaleria() {
+  galeriaOverlay.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+if (galeriaOpenBtn) galeriaOpenBtn.addEventListener('click', openGaleria);
+if (galeriaClose)   galeriaClose.addEventListener('click', closeGaleria);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && galeriaOverlay.classList.contains('is-open')) closeGaleria();
+});
+
+galeriaOverlay.addEventListener('click', (e) => {
+  if (e.target === galeriaOverlay) closeGaleria();
+});
+
 // ============================================
 // IDIOMA — CA / ES
 // ============================================
@@ -70,6 +98,7 @@ const translations = {
   ca: {
     nav_historia: 'La història',
     nav_peces:    'Les peces',
+    nav_galeria:  'La galeria',
     nav_proces:   'El procés',
     nav_contacte: 'Contacte',
 
@@ -140,6 +169,7 @@ const translations = {
   es: {
     nav_historia: 'La historia',
     nav_peces:    'Las piezas',
+    nav_galeria:  'La galería',
     nav_proces:   'El proceso',
     nav_contacte: 'Contacto',
 
