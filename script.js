@@ -91,6 +91,63 @@ galeriaOverlay.addEventListener('click', (e) => {
   if (e.target === galeriaOverlay) closeGaleria();
 });
 
+// --- VISOR FOTO INDIVIDUAL ---
+const fotoViewer     = document.getElementById('foto-viewer');
+const fotoViewerImg  = document.getElementById('foto-viewer-img');
+const fotoViewerClose= document.getElementById('foto-viewer-close');
+const fotoPrev       = document.getElementById('foto-prev');
+const fotoNext       = document.getElementById('foto-next');
+
+let fotoImages = [];
+let fotoIndex  = 0;
+
+function openFoto(imgs, index) {
+  fotoImages = imgs;
+  fotoIndex  = index;
+  fotoViewerImg.src = fotoImages[fotoIndex].src;
+  fotoViewerImg.alt = fotoImages[fotoIndex].alt;
+  fotoViewer.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeFoto() {
+  fotoViewer.classList.remove('is-open');
+  document.body.style.overflow = galeriaOverlay.classList.contains('is-open') ? 'hidden' : '';
+}
+
+function showFoto(index) {
+  fotoIndex = (index + fotoImages.length) % fotoImages.length;
+  fotoViewerImg.style.opacity = '0';
+  setTimeout(() => {
+    fotoViewerImg.src = fotoImages[fotoIndex].src;
+    fotoViewerImg.alt = fotoImages[fotoIndex].alt;
+    fotoViewerImg.style.opacity = '1';
+  }, 180);
+}
+
+// Delegar clic a les imatges de la galeria overlay
+galeriaOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('galeria-overlay-img')) {
+    const imgs = Array.from(galeriaOverlay.querySelectorAll('.galeria-overlay-img'));
+    openFoto(imgs, imgs.indexOf(e.target));
+  }
+});
+
+fotoViewerClose.addEventListener('click', closeFoto);
+fotoPrev.addEventListener('click', () => showFoto(fotoIndex - 1));
+fotoNext.addEventListener('click', () => showFoto(fotoIndex + 1));
+
+fotoViewer.addEventListener('click', (e) => {
+  if (e.target === fotoViewer) closeFoto();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (!fotoViewer.classList.contains('is-open')) return;
+  if (e.key === 'Escape')     closeFoto();
+  if (e.key === 'ArrowLeft')  showFoto(fotoIndex - 1);
+  if (e.key === 'ArrowRight') showFoto(fotoIndex + 1);
+});
+
 // ============================================
 // IDIOMA — CA / ES
 // ============================================
