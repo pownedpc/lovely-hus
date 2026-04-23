@@ -407,6 +407,7 @@ em { font-style: italic; color: var(--madera); }
   object-fit: cover;
   transition: transform 0.8s ease;
   filter: saturate(0.9);
+  cursor: zoom-in;
 }
 .peca:hover .peca-img { transform: scale(1.03); }
 

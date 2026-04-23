@@ -134,6 +134,14 @@ galleryImgs.forEach((img, index) => {
   });
 });
 
+// Listeners a les fotos de les peces
+const pecaImgs = Array.from(document.querySelectorAll('.peca-img'));
+pecaImgs.forEach((img, index) => {
+  img.addEventListener('click', () => {
+    openFoto(pecaImgs, index);
+  });
+});
+
 fotoViewerClose.addEventListener('click', closeFoto);
 fotoPrev.addEventListener('click', () => showFoto(fotoIndex - 1));
 fotoNext.addEventListener('click', () => showFoto(fotoIndex + 1));
