@@ -125,12 +125,13 @@ function showFoto(index) {
   }, 180);
 }
 
-// Delegar clic a les imatges de la galeria overlay
-galeriaOverlay.addEventListener('click', (e) => {
-  if (e.target.classList.contains('galeria-overlay-img')) {
-    const imgs = Array.from(galeriaOverlay.querySelectorAll('.galeria-overlay-img'));
-    openFoto(imgs, imgs.indexOf(e.target));
-  }
+// Listeners directes a cada imatge de la galeria
+const galleryImgs = Array.from(document.querySelectorAll('.galeria-overlay-img'));
+galleryImgs.forEach((img, index) => {
+  img.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openFoto(galleryImgs, index);
+  });
 });
 
 fotoViewerClose.addEventListener('click', closeFoto);
