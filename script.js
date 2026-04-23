@@ -199,6 +199,18 @@ const translations = {
     p6_title: 'Espigues de pampa',
     p6_desc:  'Natura seca en el seu millor moment.<br>Aporten textura i calidesa sense fer soroll.<br><br>Les trio individualment per la seva forma i el seu color.',
 
+    p7_badge: 'Peça exclusiva',
+    p7_title: 'Tassa Lovely Hüs',
+    p7_desc:  'Ceràmica blanca amb el segell de la marca. Per als matins que es mereixen un gest bonic. Per a la teva taula, la teva cuina o per regalar.',
+
+    p8_badge: 'Fet a mà',
+    p8_title: 'Barret de palla',
+    p8_desc:  'Palla natural i flors seques cosides una a una. Cada barret és diferent perquè cada flor és diferent. Per portar o per penjar a la paret com si fos una peça d\'art.',
+
+    p9_badge: 'Seleccionada',
+    p9_title: 'Gerro de ceràmica',
+    p9_desc:  'Alt, net i honest. La seva forma senzilla fa que qualsevol flor que hi posis sembli un quadre. Ceràmica matte amb un toc de color natural a la vora.',
+
     peca_btn:   'Aquesta peça és meva',
     peces_nota: '✦ \u00a0Les peces s\'esgoten i no sempre es reposen. Si t\'agrada alguna, no esperis massa.',
 
@@ -269,6 +281,18 @@ const translations = {
     p6_badge: 'Seleccionada',
     p6_title: 'Espigas de pampa',
     p6_desc:  'Naturaleza seca en su mejor momento.<br>Aportan textura y calidez sin hacer ruido.<br><br>Las elijo individualmente por su forma y su color.',
+
+    p7_badge: 'Pieza exclusiva',
+    p7_title: 'Taza Lovely Hüs',
+    p7_desc:  'Cerámica blanca con el sello de la marca. Para las mañanas que se merecen un gesto bonito. Para tu mesa, tu cocina o para regalar.',
+
+    p8_badge: 'Hecho a mano',
+    p8_title: 'Sombrero de paja',
+    p8_desc:  'Paja natural y flores secas cosidas una a una. Cada sombrero es diferente porque cada flor es diferente. Para llevarlo puesto o para colgarlo en la pared como si fuera una pieza de arte.',
+
+    p9_badge: 'Seleccionada',
+    p9_title: 'Jarrón de cerámica',
+    p9_desc:  'Alto, limpio y honesto. Su forma sencilla hace que cualquier flor que le pongas parezca un cuadro. Cerámica matte con un toque de color natural en el borde.',
 
     peca_btn:   'Esta pieza es mía',
     peces_nota: '✦ \u00a0Las piezas se agotan y no siempre se reponen. Si te gusta alguna, no esperes demasiado.',
