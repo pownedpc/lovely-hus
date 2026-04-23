@@ -104,6 +104,7 @@ let fotoIndex  = 0;
 function openFoto(imgs, index) {
   fotoImages = imgs;
   fotoIndex  = index;
+  fotoViewerImg.style.opacity = '1';
   fotoViewerImg.src = fotoImages[fotoIndex].src;
   fotoViewerImg.alt = fotoImages[fotoIndex].alt;
   fotoViewer.classList.add('is-open');
@@ -134,10 +135,11 @@ galleryImgs.forEach((img, index) => {
   });
 });
 
-// Listeners a les fotos de les peces
+// Listeners a les fotos de les peces (via wrap per fiabilitat)
 const pecaImgs = Array.from(document.querySelectorAll('.peca-img'));
-pecaImgs.forEach((img, index) => {
-  img.addEventListener('click', () => {
+document.querySelectorAll('.peca-img-wrap').forEach((wrap, index) => {
+  wrap.addEventListener('click', (e) => {
+    e.stopPropagation();
     openFoto(pecaImgs, index);
   });
 });
