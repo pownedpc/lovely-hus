@@ -322,6 +322,10 @@ const translations = {
     p9_title: 'Gerro de ceràmica',
     p9_desc:  'Alt, net i honest. La seva forma senzilla fa que qualsevol flor que hi posis sembli un quadre. Ceràmica matte amb un toc de color natural a la vora.',
 
+    p10_badge: 'Nova',
+    p10_title: 'Llibreta Lovely Hüs',
+    p10_desc:  'Tapa dura amb el segell de la marca. Per apuntar idees, llistes d\'espais i moments que vols recordar. Petita, però amb presència.',
+
     peca_btn:   'Aquesta peça és meva',
     peces_nota: '✦ \u00a0Les peces s\'esgoten i no sempre es reposen. Si t\'agrada alguna, no esperis massa.',
 
@@ -409,6 +413,10 @@ const translations = {
     p9_badge: 'Seleccionada',
     p9_title: 'Jarrón de cerámica',
     p9_desc:  'Alto, limpio y honesto. Su forma sencilla hace que cualquier flor que le pongas parezca un cuadro. Cerámica matte con un toque de color natural en el borde.',
+
+    p10_badge: 'Nueva',
+    p10_title: 'Libreta Lovely Hüs',
+    p10_desc:  'Tapa dura con el sello de la marca. Para apuntar ideas, listas de espacios y momentos que quieres recordar. Pequeña, pero con presencia.',
 
     peca_btn:   'Esta pieza es mía',
     peces_nota: '✦ \u00a0Las piezas se agotan y no siempre se reponen. Si te gusta alguna, no esperes demasiado.',
