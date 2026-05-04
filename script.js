@@ -80,6 +80,33 @@ function closeGaleria() {
   document.body.style.overflow = '';
 }
 
+// --- OVERLAY BOTIGA ---
+const botigaOverlay = document.getElementById('botiga-overlay');
+const botigaClose   = document.getElementById('botiga-close');
+const botigaOpenBtn = document.getElementById('open-botiga');
+
+function openBotiga(e) {
+  e.preventDefault();
+  botigaOverlay.classList.add('is-open');
+  document.body.style.overflow = 'hidden';
+  botigaClose.focus();
+}
+function closeBotiga() {
+  botigaOverlay.classList.remove('is-open');
+  document.body.style.overflow = '';
+}
+
+if (botigaOpenBtn) botigaOpenBtn.addEventListener('click', openBotiga);
+if (botigaClose)   botigaClose.addEventListener('click', closeBotiga);
+
+botigaOverlay.addEventListener('click', (e) => {
+  if (e.target === botigaOverlay) closeBotiga();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && botigaOverlay.classList.contains('is-open')) closeBotiga();
+});
+
 if (galeriaOpenBtn) galeriaOpenBtn.addEventListener('click', openGaleria);
 if (galeriaClose)   galeriaClose.addEventListener('click', closeGaleria);
 
@@ -169,6 +196,11 @@ const translations = {
     nav_galeria:  'La galeria',
     nav_proces:   'El procés',
     nav_contacte: 'Contacte',
+    nav_botiga:   'La botiga',
+
+    botiga_eyebrow: 'Aviat',
+    botiga_title:   'Espai en<br><em>construcció.</em>',
+    botiga_sub:     'Estem preparant alguna cosa especial.<br>Torna aviat.',
 
     hero_h1:  'Calma visual.<br>Textures nobles.<br>Racons amb intenció.',
     hero_sub: 'Elements fets a mà i seleccionats amb criteri.<br>Per a cases que es senten seves.',
@@ -252,6 +284,11 @@ const translations = {
     nav_galeria:  'La galería',
     nav_proces:   'El proceso',
     nav_contacte: 'Contacto',
+    nav_botiga:   'La tienda',
+
+    botiga_eyebrow: 'Próximamente',
+    botiga_title:   'Espacio en<br><em>construcción.</em>',
+    botiga_sub:     'Estamos preparando algo especial.<br>Vuelve pronto.',
 
     hero_h1:  'Calma visual.<br>Texturas nobles.<br>Rincones con intención.',
     hero_sub: 'Elementos hechos a mano y seleccionados con criterio.<br>Para casas que se sienten propias.',
