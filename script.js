@@ -96,12 +96,17 @@ function closeBotiga() {
   document.body.style.overflow = '';
 }
 
-if (botigaOpenBtn) botigaOpenBtn.addEventListener('click', openBotiga);
-if (botigaClose)   botigaClose.addEventListener('click', closeBotiga);
-
-botigaOverlay.addEventListener('click', (e) => {
+document.addEventListener('click', (e) => {
+  if (e.target.closest('#open-botiga')) {
+    e.preventDefault();
+    botigaOverlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    botigaClose.focus();
+  }
   if (e.target === botigaOverlay) closeBotiga();
 });
+
+if (botigaClose) botigaClose.addEventListener('click', closeBotiga);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && botigaOverlay.classList.contains('is-open')) closeBotiga();
