@@ -4,27 +4,10 @@
 // ============================================
 
 // ============================================
-// NOVETAT — Canvia aquest objecte per anunciar
-// una nova peça o foto. Canvia l'ID cada cop
-// perquè el popup torni a aparèixer als usuaris.
-// action: 'galeria' | 'botiga' | 'peces' | '#contacte'
+// NOVETAT — Es llegeix automàticament de novelty.json
+// Per anunciar una novetat nova: edita novelty.json
+// (canvia l'id i els textos) i fes push.
 // ============================================
-const NOVELTY = {
-  id:     'nov-espe-0505',
-  action: 'galeria',
-  ca: {
-    label: 'Novetat per tu',
-    desc:  'Espelmes artesanals amb flors seques. Ara a la galeria.',
-    cta:   'Veure-les',
-    skip:  'Potser després',
-  },
-  es: {
-    label: 'Novedad para ti',
-    desc:  'Velas artesanales con flores secas. Ya en la galería.',
-    cta:   'Verlas',
-    skip:  'Quizás después',
-  },
-};
 
 
 
@@ -216,57 +199,61 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') showFoto(fotoIndex + 1);
 });
 
-// --- POPUP NOVETAT ---
-(function () {
-  const SEEN_KEY = 'lh_novelty_seen';
-  if (localStorage.getItem(SEEN_KEY) === NOVELTY.id) return;
+// --- POPUP NOVETAT (llegeix novelty.json automàticament) ---
+fetch('/novelty.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(novelty => {
+    const SEEN_KEY = 'lh_novelty_seen';
+    if (localStorage.getItem(SEEN_KEY) === novelty.id) return;
 
-  const popup   = document.getElementById('novelty-popup');
-  const labelEl = document.getElementById('novelty-label');
-  const descEl  = document.getElementById('novelty-desc');
-  const ctaEl   = document.getElementById('novelty-cta');
-  const skipEl  = document.getElementById('novelty-skip');
-  const xEl     = document.getElementById('novelty-x');
+    const popup   = document.getElementById('novelty-popup');
+    const labelEl = document.getElementById('novelty-label');
+    const descEl  = document.getElementById('novelty-desc');
+    const ctaEl   = document.getElementById('novelty-cta');
+    const skipEl  = document.getElementById('novelty-skip');
+    const xEl     = document.getElementById('novelty-x');
 
-  function renderNovelty(lang) {
-    const t = NOVELTY[lang] || NOVELTY.ca;
-    labelEl.textContent = t.label;
-    descEl.textContent  = t.desc;
-    ctaEl.textContent   = t.cta;
-    skipEl.textContent  = t.skip;
-  }
+    let currentLangNovelty = 'ca';
 
-  function dismissNovelty() {
-    popup.classList.remove('is-visible');
-    localStorage.setItem(SEEN_KEY, NOVELTY.id);
-  }
-
-  function doAction() {
-    dismissNovelty();
-    const a = NOVELTY.action;
-    if (a === 'galeria') {
-      document.getElementById('open-galeria')?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    } else if (a === 'botiga') {
-      document.getElementById('open-botiga')?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-    } else if (a) {
-      document.querySelector(a)?.scrollIntoView({ behavior: 'smooth' });
+    function renderNovelty(lang) {
+      currentLangNovelty = lang;
+      const t = novelty[lang] || novelty.ca;
+      labelEl.textContent = t.label;
+      descEl.textContent  = t.desc;
+      ctaEl.textContent   = t.cta;
+      skipEl.textContent  = t.skip;
     }
-  }
 
-  ctaEl.addEventListener('click', doAction);
-  skipEl.addEventListener('click', dismissNovelty);
-  xEl.addEventListener('click', dismissNovelty);
+    function dismissNovelty() {
+      popup.classList.remove('is-visible');
+      localStorage.setItem(SEEN_KEY, novelty.id);
+    }
 
-  renderNovelty('ca');
+    function doAction() {
+      dismissNovelty();
+      const a = novelty.action;
+      if (a === 'galeria') {
+        document.getElementById('open-galeria')?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      } else if (a === 'botiga') {
+        document.getElementById('open-botiga')?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+      } else if (a) {
+        document.querySelector(a)?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
 
-  // Escolta canvis d'idioma per actualitzar el popup
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => renderNovelty(btn.dataset.lang));
-  });
+    ctaEl.addEventListener('click', doAction);
+    skipEl.addEventListener('click', dismissNovelty);
+    xEl.addEventListener('click', dismissNovelty);
 
-  // Mostra el popup després d'1.5s
-  setTimeout(() => popup.classList.add('is-visible'), 1500);
-})();
+    renderNovelty('ca');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => renderNovelty(btn.dataset.lang));
+    });
+
+    setTimeout(() => popup.classList.add('is-visible'), 1500);
+  })
+  .catch(() => {}); // si no hi ha novelty.json, no passa res
 
 // ============================================
 // IDIOMA — CA / ES

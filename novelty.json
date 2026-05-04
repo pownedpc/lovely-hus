@@ -1,0 +1,16 @@
+{
+  "id": "nov-espe-0505",
+  "action": "galeria",
+  "ca": {
+    "label": "Novetat per tu",
+    "desc": "Espelmes artesanals amb flors seques. Ara a la galeria.",
+    "cta": "Veure-les",
+    "skip": "Potser després"
+  },
+  "es": {
+    "label": "Novedad para ti",
+    "desc": "Velas artesanales con flores secas. Ya en la galería.",
+    "cta": "Verlas",
+    "skip": "Quizás después"
+  }
+}
