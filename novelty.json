@@ -1,16 +1,16 @@
 {
-  "id": "nov-espe-0505",
-  "action": "galeria",
+  "id": "nov-libreta-0505",
+  "action": "peces",
   "ca": {
     "label": "Novetat per tu",
-    "desc": "Espelmes artesanals amb flors seques. Ara a la galeria.",
-    "cta": "Veure-les",
+    "desc": "Llibreta Lovely Hüs. Nova a les peces.",
+    "cta": "Veure-la",
     "skip": "Potser després"
   },
   "es": {
     "label": "Novedad para ti",
-    "desc": "Velas artesanales con flores secas. Ya en la galería.",
-    "cta": "Verlas",
+    "desc": "Libreta Lovely Hüs. Nueva en las piezas.",
+    "cta": "Verla",
     "skip": "Quizás después"
   }
 }
