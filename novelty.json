@@ -12,5 +12,11 @@
     "desc": "Libreta Lovely Hüs. Nueva en las piezas.",
     "cta": "Verla",
     "skip": "Quizás después"
+  },
+  "sv": {
+    "label": "Nyhet för dig",
+    "desc": "Lovely Hüs-anteckningsbok. Ny bland föremålen.",
+    "cta": "Se den",
+    "skip": "Kanske senare"
   }
 }

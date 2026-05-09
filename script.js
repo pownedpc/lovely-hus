@@ -433,6 +433,94 @@ const translations = {
     foot_eye:  'Contacto',
     foot_text: 'Para encargos, asesoría o simplemente para decir hola:',
     foot_copy: '© 2025 Lovely Hüs by Olga · Hecho con calma e intención',
+  },
+
+  sv: {
+    nav_historia: 'Historien',
+    nav_peces:    'Föremålen',
+    nav_galeria:  'Galleriet',
+    nav_proces:   'Processen',
+    nav_contacte: 'Kontakt',
+    nav_botiga:   'Butiken',
+
+    botiga_eyebrow: 'Snart',
+    botiga_title:   'Utrymmet är<br><em>under uppbyggnad.</em>',
+    botiga_sub:     'Vi förbereder något speciellt.<br>Kom tillbaka snart.',
+
+    hero_h1:  'Visuellt lugn.<br>Ädla texturer.<br>Hörn med avsikt.',
+    hero_sub: 'Handgjorda och noggrant utvalda föremål.<br>För hem som känns som sitt eget.',
+    hero_cta: 'Upptäck varje detalj',
+
+    hist_eyebrow: 'Vilka vi är',
+    hist_h2:   'Ett projekt gjort<br><em>för hand och med lugn</em>',
+    hist_p1:   'Lovely Hüs föds ur önskan om ett hem som verkligen känns äkta. Inte perfekt. Inte från en katalog. Ditt.',
+    hist_p2:   'Varje föremål du hittar här har gått genom mina händer. Några har jag skapat från grunden. Andra har jag hittat på en marknad, i ett hörn, och sett vad de kunde bli.',
+    hist_p3:   'Inget av dem är här för att fylla ett utrymme.<br>Alla är här för att tillföra något.',
+    hist_quote: '"Jag designar inte vackra rum.<br>Jag skapar platser där man vill stanna lite längre."',
+
+    peces_eyebrow: 'Föremålen',
+    peces_h2:  'Handgjort.<br><em>Tänkt för ditt hem.</em>',
+    peces_sub: 'Varje föremål är unikt.<br>När det lämnar, ger det plats åt nästa.',
+
+    p1_badge: 'Handgjord',
+    p1_title: 'Esparto-solfjädrar',
+    p1_desc:  'Flätat esparto, torkade blommor och mycket tålamod. Varje par är annorlunda för att varje strå är annorlunda. Perfekt för en vägg som behöver textur utan att skrika.',
+
+    p2_badge: 'Utvald',
+    p2_title: 'Rotinghylla',
+    p2_desc:  'Rund, varm och ärlig. Jag ger den sin plats på väggen och den förvandlar vilket hörn som helst. Du kan lägga vad du vill på den; den gör jobbet själv.',
+
+    p3_badge: 'Unik bit',
+    p3_title: 'Vägg-makramé',
+    p3_desc:  'Råbomull, knutar gjorda ett i taget och en hittad gren. Inga två är lika. Fyller en hel vägg utan att väga något.',
+
+    p4_badge: 'Handgjord',
+    p4_title: 'Botaniska prints',
+    p4_desc:  'Bildhållare i trä och linsnöre.<br>Varje print, noggrant utvald.<br><br>Att hänga ensamma eller i komposition.<br>Förändrar en väggs atmosfär på några minuter.',
+
+    p5_badge: 'Utvald',
+    p5_title: 'Ram med naturblomma',
+    p5_desc:  'Träram med naturlig blomma. En bit som dekorerar för sig själv, utan att behöva något mer runt sig.',
+
+    p6_badge: 'Utvald',
+    p6_title: 'Pampagräs',
+    p6_desc:  'Torr natur i sitt bästa ögonblick.<br>Tillför textur och värme utan att göra väsen av sig.<br><br>Jag väljer dem individuellt för deras form och färg.',
+
+    p7_badge: 'Exklusiv bit',
+    p7_title: 'Lovely Hüs-mugg',
+    p7_desc:  'Vit keramik med varumärkets stämpel. För de morgnar som förtjänar en vacker gest. För ditt bord, ditt kök eller att ge bort.',
+
+    p8_badge: 'Handgjord',
+    p8_title: 'Halmhatt',
+    p8_desc:  'Naturhalm och torkade blommor sydda en efter en. Varje hatt är annorlunda för att varje blomma är annorlunda. Att bära eller hänga på väggen som ett konstverk.',
+
+    p9_badge: 'Utvald',
+    p9_title: 'Keramikvase',
+    p9_desc:  'Hög, ren och ärlig. Dess enkla form gör att vilken blomma du lägger i den ser ut som en tavla. Matte keramik med ett naturligt färgstänk på kanten.',
+
+    peca_btn:   'Denna bit är min',
+    peces_nota: '✦  Föremålen tar slut och fylls inte alltid på. Om du gillar något, vänta inte för länge.',
+
+    gal_eyebrow: 'Hemmet',
+    gal_h2:      'Utrymmen som<br><em>känns som sina egna.</em>',
+
+    proc_eyebrow: 'Processen',
+    proc_h2:  'Så föds<br><em>ett föremål</em>',
+    proc_p1:  'Det börjar på en marknad, på en promenad, med en gren som faller rätt. Aldrig i en katalog.',
+    proc_p2:  'Varje föremål går genom mina händer. Jag rengör det, förvandlar det, ger det sin plats. Om det inte övertygar mig helt, kommer det inte hit.',
+    proc_p3:  'Resultatet är aldrig perfekt. Det är bättre än perfekt: det är äkta.',
+    proc_cta: 'Följ processen på Instagram →',
+
+    ass_eyebrow: 'Mer än föremål',
+    ass_h2:  'Jag hjälper dig att föreställa dig<br><em>ditt utrymme</em>',
+    ass_p1:  'Om du har ett hörn som inte riktigt fungerar kan vi prata. Du berättar hur det ser ut, skickar foton, och jag berättar exakt vad jag skulle ändra och hur.',
+    ass_p2:  'Inget besök. Inga komplikationer. Med omdöme.',
+    ass_cta: 'Låt oss prata',
+
+    foot_tagline: 'Föremål med själ<br>för lugna utrymmen.',
+    foot_eye:  'Kontakt',
+    foot_text: 'För beställningar, rådgivning eller bara för att säga hej:',
+    foot_copy: '© 2025 Lovely Hüs by Olga · Gjort med lugn och avsikt',
   }
 };
 
